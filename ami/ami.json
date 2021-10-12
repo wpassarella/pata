@@ -14,11 +14,11 @@
             "secret_key": "{{ user `AWS_SECRET_ACCESS_KEY` }}",
             "vpc_id": "{{ user `vpc_id` }}",
             "subnet_id": "{{ user `subnet_id` }}",
-            "instance_type" : "t2.micro",
+            "instance_type" : "t2.small",
             "source_ami" : "{{ user `source_ami` }}",
             "ssh_username" : "ec2-user",
             "ssh_timeout": "2m",
-            "ami_name" : "custom-jenkins-ami",
+            "ami_name" : "custom-k8s-ami",
             "ami_description" : "Amazon Linux Image with Docker",
             "run_tags" : {
                 "Name" : "packer-builder-docker"
