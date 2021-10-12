@@ -35,7 +35,7 @@
 - name: Ensure Python pip packages are installed
   pip:
     name: "{{ packages }}"
-    vars:
+  vars:
     packages:
     - boto
     - boto3
