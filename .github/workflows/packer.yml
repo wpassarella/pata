@@ -1,9 +1,7 @@
 name: Run packer build on a template file
 
-on:
-  push:
-    branches:
-        - 'master'
+on: [workflow_dispatch]
+
 jobs:
   packer_build:
     runs-on: ubuntu-latest
