@@ -6,9 +6,9 @@
     lock_timeout: 60
     state: "latest"
 
+- name: "include Docker installation tasks"
+  include_tasks: "docker.yml"
+
 - name: Disable SELinux
   selinux:
     state: disabled
-
-- name: "include Docker installation tasks"
-  include_tasks: "docker.yml"
