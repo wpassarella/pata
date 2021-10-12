@@ -1,0 +1,7 @@
+---
+- name: Packer AMI provisioner playbook for PATA Project
+  hosts: localhost
+  become: true
+  gather_facts: yes
+  roles:
+    - provisioner

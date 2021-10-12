@@ -1,0 +1,10 @@
+---
+
+- name: "install required software security updates"
+  yum:
+    security: "yes"
+    lock_timeout: 60
+    state: "latest"
+
+- name: "include Docker installation tasks"
+  include_tasks: "docker.yml"

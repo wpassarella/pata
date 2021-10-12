@@ -40,9 +40,12 @@
     ],
     "provisioners" : [
         {
-            "type" : "file",
-            "source" : "./dockerinstall.sh",
-            "destination" : "/tmp/dockerinstall.sh"
+            "type": "ansible-local",
+            "playbook_file": "./provisioners/ansible/provisioner.yml",
+            "playbook_dir": "./provisioners/ansible",
+            "role_paths": "./provisioners/ansible/roles",
+            "staging_directory": "/tmp/packer",
+            "clean_staging_directory": false
         }
     ]
 }
