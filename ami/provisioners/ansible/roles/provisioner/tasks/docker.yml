@@ -1,5 +1,6 @@
 # Ansible playbook AWS - install docker
 ---
+
 - name: "AWS - Install docker"
   hosts: aws-docker-vms
   become: yes
