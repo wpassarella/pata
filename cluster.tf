@@ -3,7 +3,7 @@
 ###############################
 locals {
   k8s_cluster_name        = "k8s"
-  k8s_instance_type       = "m5.xlarge"
+  k8s_instance_type       = "t3.medium"
   k8s_instance_ami        = "ami-011f3c2fbe5ceee1d"
   k8s_enhanced_monitoring = false
 
