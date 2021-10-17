@@ -2,24 +2,24 @@
 ### Stack local variables
 ###############################
 locals {
-  k8s_cluster_name = "k8s"
-  k8s_instance_type = "m5.xlarge"
-  k8s_instance_ami = "ami-custom-k8s-ami"
+  k8s_cluster_name        = "k8s"
+  k8s_instance_type       = "m5.xlarge"
+  k8s_instance_ami        = "ami-custom-k8s-ami"
   k8s_enhanced_monitoring = false
 
   k8s_root_volume_size = 100
-  k8s_key_name = aws_key_pair.k8s.key_name
+  k8s_key_name         = aws_key_pair.k8s.key_name
 }
 
 ###############################
 ### EC2
 ###############################
 module "k8s_cluster" {
-  instance_count       = 1
-  source               = "./_modules/ec2_cluster"
-  name                 = "k8s"
-  ami                  = local.k8s_instance_ami
-  monitoring           = local.k8s_enhanced_monitoring
+  instance_count = 1
+  source         = "./_modules/ec2_cluster"
+  name           = "k8s"
+  ami            = local.k8s_instance_ami
+  monitoring     = local.k8s_enhanced_monitoring
   #subnet_ids           = local.k8s_subnet
   instance_type        = local.k8s_instance_type
   key_name             = local.k8s_key_name
