@@ -1,7 +1,7 @@
 resource "aws_security_group" "k8s" {
   name        = "allow_ssh"
   description = "Allow ssh inbound traffic"
-  vpc_id      = module.vpc.vpc.id
+  vpc_id      = module.vpc.vpc_id
 
   ingress {
     # TLS (change to whatever ports you need)
